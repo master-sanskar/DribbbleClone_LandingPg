@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Helvetica;
+}
+
+.desktop-nav,
+.mobile-nav {
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    color: rgb(95, 93, 93);
+    padding: 0 1.5vmax;
+    font-size: 1.1vmax;
+}
+
+.mobile-nav {
+    display: none;
+    font-size: 2.5vmax;
+    font-weight: 500;
+    padding: 0 3vmax;
+    width: 100vw;
+    align-items: center;
+}
+
+.mobile-nav img {
+    height: 3vmax;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-weight: 400;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-left li,
+.nav-right li {
+    padding: 0 1vmax;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.nav-left li:hover {
+    color: black;
+}
+
+.nav-left img {
+    height: 1.2vmax;
+    transition: 0.25s;
+}
+
+.nav-left img:hover {
+    opacity: 0.6;
+}
+
+.signup-btn {
+    padding: 1vmax;
+    background-color: #e94c89;
+    color: #fff;
+    font-weight: 600;
+    height: 3vmax;
+    border-radius: 0.6vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.25s;
+}
+
+.signup-btn:hover {
+    opacity: 0.6;
+}
+
+header {
+    width: 100%;
+    /* height: 80vh; */
+    padding: 3vmax 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+header video {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+}
+
+.tabs {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.tabs button {
+    padding: 1vmax 1.5vmax;
+    font-size: 1.1vmax;
+    border-radius: 2vmax;
+    margin-right: 0.5vmax;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    font-weight: 400;
+    transition: 0.25s;
+}
+
+.tabs button:first-child {
+    background-color: white;
+    color: black;
+}
+
+.tabs button:hover {
+    background-color: white;
+    color: black;
+}
+
+header h1 {
+    font-size: 3vmax;
+    width: 40%;
+    text-align: center;
+    margin-top: 4vmax;
+    margin-bottom: 2vmax;
+}
+
+header p {
+    width: 40%;
+    text-align: center;
+    font-size: 1.1vmax;
+}
+
+.input-search {
+    margin: 3vmax 0;
+    position: relative;
+}
+
+.input-search input {
+    width: 45vw;
+    border: none;
+    outline: none;
+    border-radius: 2vmax;
+    font-size: 1.2vmax;
+    padding: 1.3vmax 3vmax 1.3vmax 5vmax;
+}
+
+.input-search i {
+    position: absolute;
+    font-size: 1.3vmax;
+    z-index: 1;
+    color: rgb(187, 187, 187);
+    top: 33%;
+    left: 5%;
+}
+
+.search-keywords span {
+    padding: 0.5vmax 1vmax;
+    border: 1px solid gray;
+    margin: 0 0.5vmax;
+    font-size: 1vmax;
+    border-radius: 2vmax;
+    transition: 0.25s;
+}
+
+.search-keywords span:first-child {
+    border: none;
+    font-size: 0.9vmax;
+}
+
+.search-keywords span:hover {
+    border-color: white;
+}
+
+@media (max-width: 800px) {
+
+    .nav-left,
+    .nav-right {
+        font-size: 1.4vmax;
+    }
+}
+
+@media (max-width: 600px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+    }
+}
+
+@media (max-width:600px) {
+    .tabs {
+        width: 90vw;
+        margin-top: -40vw;
+    }
+
+    header {
+        width: 100%;
+        /* height: 80vh; */
+        padding: 3vmax 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .tabs button {
+        padding: 1.1vmax 1.9vmax;
+        font-size: 2.4vmax;
+        border-radius: 2vmax;
+        margin-right: 0.5vmax;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        border: none;
+        font-weight: 400;
+        transition: 0.25s;
+        margin-top: 1vmax;
+        margin-bottom: 2vmax;
+        display: inline-block;
+    }
+
+    .tabs button:first-child {
+        background-color: white;
+        color: black;
+    }
+
+    .tabs button:hover {
+        background-color: white;
+        color: black;
+    }
+
+    header h1 {
+        font-size: 3.5vmax;
+        width: 90%;
+        text-align: center;
+        margin-top: 4vmax;
+        margin-bottom: 4vmax;
+    }
+
+    header p {
+        width: 80%;
+        text-align: center;
+        font-size: 2.4vmax;
+        line-height: 3vmax;
+    }
+
+    .input-search {
+        margin: 7vmax 0;
+        position: relative;
+    }
+
+    .input-search input {
+        width: 80vw;
+        border: none;
+        outline: none;
+        border-radius: 5vmax;
+        font-size: 2.2vmax;
+        padding: 2vmax 3vmax 2vmax 5vmax;
+    }
+
+    .input-search i {
+        position: absolute;
+        font-size: 1.3vmax;
+        z-index: 1;
+        color: rgb(187, 187, 187);
+        top: 33%;
+        left: 5%;
+    }
+
+    .search-keywords {
+        font-size: 2vmax;
+    }
+
+    .search-keywords span {
+        padding: 0.8vmax 1.4vmax;
+        border: 1px solid gray;
+        margin: 0 1.5vmax;
+        line-height: 6vmax;
+        text-align: center;
+        font-size: 2.7vmax;
+        border-radius: 2vmax;
+        transition: 0.25s;
+    }
+
+    .search-keywords span:first-child {
+        border: none;
+        font-size: 2.6vmax;
+    }
+
+    .search-keywords span:hover {
+        border-color: white;
+    }
+
+}
